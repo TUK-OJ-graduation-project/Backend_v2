@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'corsheaders',
     'CodingProblems',
     'submissions',
     'accounts',
@@ -61,6 +62,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
 ]
 
 ROOT_URLCONF = 'config.urls'
@@ -176,3 +179,9 @@ DJOSER = {
     'PASSWORD_RESET_CONFIRM_URL': 'password-reset-confirm/{uid}/{token}/',
     'PASSWORD_RESET_CONFIRM_RETYPE': True,
 }
+
+CORS_ORIGIN_ALLOW_ALL = True # 모든 호스트 허용
+
+CORS_ORIGIN_WHITELIST = [
+    "http://localhost:3000",
+]
