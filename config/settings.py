@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'ChoicesProblems',
     'BlankProblems',
     'oxQuiz',
+    'qna',
     'djoser',
     'rest_framework_simplejwt',
 ]

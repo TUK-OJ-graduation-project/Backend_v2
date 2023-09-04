@@ -14,6 +14,7 @@ urlpatterns = [
     path('', include('ChoicesProblems.urls')),
     path('', include('BlankProblems.urls')),
     path('', include('oxQuiz.urls')),
+    path('', include('qna.urls')),
     path('auth/', include('djoser.urls')), # include Djoser's URLs
     path('auth/jwt/create/', CustomTokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('auth/jwt/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
