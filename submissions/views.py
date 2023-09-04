@@ -6,7 +6,7 @@ from .models import Submission
 from .serializers import SubmissionSerializer
 from CodingProblems.models import CodingProblem
 import boto3
-import os
+import os 
 import json
 
 class SubmissionList(APIView):

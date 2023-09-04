@@ -50,6 +50,9 @@ INSTALLED_APPS = [
     'CodingProblems',
     'submissions',
     'accounts',
+    'ChoicesProblems',
+    'BlankProblems',
+    'oxQuiz',
     'djoser',
     'rest_framework_simplejwt',
 ]
