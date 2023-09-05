@@ -20,6 +20,8 @@ class CodingProblem(models.Model):
     language = models.CharField(max_length=2, choices=LANGUAGE_CHOICES) # list of language choices
     input_format = models.TextField() # example input (testcase)
     output_format = models.TextField() # example output (testcase)
+    level = models.CharField(max_length=100, default="Level 1")
+    hint = models.CharField(max_length=400, default="No Hint")
     created_at = models.DateTimeField(auto_now_add=True) # creation date
     updated_at = models.DateTimeField(auto_now=True) # Modification date
     is_deleted = models.BooleanField(default=False) # Whether to delete
